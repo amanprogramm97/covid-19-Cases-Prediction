@@ -35,6 +35,8 @@
  ## Compile train and test data
  - concate the train and test data 
  - make a prediction using model that has created
+ - result of MAPE 
+ - ![img](/MAPE_result.png)
 
  ## Graph 
  - change back mms to the actual data
