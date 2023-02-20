@@ -33,4 +33,6 @@ make a prediction using model that has created
 change back mms to the actual data
 and plot it using matplotlib
 
+![img](/rahman_result.png)
+
 source : GitHub - MoH-Malaysia/covid19-public: Official data on the COVID-19 epidemic in Malaysia. Powered by CPRC, CPRC Hospital System, MKAK, and MySejahtera.
