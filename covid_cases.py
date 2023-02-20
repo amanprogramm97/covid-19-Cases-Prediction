@@ -79,7 +79,7 @@ plot_model(model, show_shapes=True)
 
 log_dir = os.path.join(os.getcwd(),'logs', datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
 tb_callback = TensorBoard(log_dir=log_dir)
-hist = model.fit(x_train,y_train,batch_size=128, epochs=100, validation_data=(x_test, y_test),callbacks=[tb_callback])
+hist = model.fit(x_train,y_train,batch_size=32, epochs=700,callbacks=[tb_callback])
 
 # %% prediction test 
 y_true = y_test
@@ -93,15 +93,9 @@ print(r2_score(y_true,y_pred))
 print(hist.history.keys())
 
 plt.figure()
-plt.plot(hist.history['loss'])
-plt.plot(hist.history['val_loss'])
-plt.legend(['training loss', 'validation loss'])
-plt.show()
-
-plt.figure()
 plt.plot(hist.history['mse'])
-plt.plot(hist.history['val_mse'])
-plt.legend(['mse', 'validation mse'])
+# plt.plot(hist.history['val_mse'])
+# plt.legend(['mse', 'validation mse'])
 plt.show()
 
 # %% 
